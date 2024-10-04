@@ -28,3 +28,8 @@ int binary_search(const vector<string>& container, const string& element) {
     }
     return -1;
 }
+
+int main() {
+    std::chrono::system_clock::now();
+    cout << "Time to find \"aaaaa\": ";
+}
