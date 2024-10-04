@@ -14,5 +14,17 @@ int linear_search(const vector<string>& container, const string& element) {
 }
 
 int binary_search(const vector<string>& container, const string& element) {
-    
+    int low = 0;
+    int high = container.size()-1;
+    while (low <= high) {
+        int mid = (low + high)/2;
+        if (container[mid] == element) {
+            return mid;
+        } else if (container[mid] < element) {
+            low = mid + 1;
+        } else {
+            high = mid + 1;
+        }
+    }
+    return -1;
 }
